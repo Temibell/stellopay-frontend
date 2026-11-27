@@ -24,7 +24,7 @@ import TransactionsPagination from "./transactions-pagination";
 import { BulkActionBar } from "./bulk-action-bar";
 import { TransactionsStatement } from "./transactions-statement";
 import { ErrorState } from "@/components/ui/error-state";
-import AdvancedFilterPanel, {
+import AdvancedFilterPanel,
   type AdvancedFilterValues,
 } from "./advanced-filter-panel";
 import CsvExportToolbar from "./transactions-export-toolbar";
@@ -464,7 +464,7 @@ export default function TransactionsContent() {
     (view: SavedView, newName: string) => {
       const trimmed = newName.trim();
       if (!trimmed || trimmed.length > MAX_VIEW_NAME_LENGTH) return;
-      setSavedViews((prev) =>
+      setSavedViews((prev)
         prev.map((v) => (v.id === view.id ? { ...v, name: trimmed } : v)),
       );
     },
